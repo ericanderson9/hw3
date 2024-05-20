@@ -9,8 +9,10 @@ class EntriesController < ApplicationController
     @entry = Entry.new
     @entry["title"] = params["title"]
     @entry["description"] = params["description"]
+    @entry["posted_on"] = params["posted_on"]
+    @entry["place_id"] = params["place_id"]
     @entry.save
-    redirect_to "/entries"
+    redirect_to "/places"
   end
 
 end
